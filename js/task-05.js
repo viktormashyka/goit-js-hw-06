@@ -5,3 +5,12 @@
 
 // < input type = "text" id = "name-input" placeholder = "Please enter your name"/>
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+
+const formInputName = document.querySelector('#name-input');
+// console.log(formInputName);
+const formOutputName = document.querySelector('#name-output');
+// console.log(formOutputName);
+
+formInputName.addEventListener('input', event => {
+  formOutputName.textContent = event.currentTarget.value;
+});
