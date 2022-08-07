@@ -12,5 +12,11 @@ const formOutputName = document.querySelector('#name-output');
 // console.log(formOutputName);
 
 formInputName.addEventListener('input', event => {
-  formOutputName.textContent = event.currentTarget.value;
+  if (formInputName.value !== '') {
+    formOutputName.textContent = event.currentTarget.value;
+    return;
+  }
+
+  formOutputName.textContent = 'Anonymous';
+  return;
 });

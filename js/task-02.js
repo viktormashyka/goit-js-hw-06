@@ -16,5 +16,13 @@ const item = itemEl.classList.add('item');
 
 const markup = ingredients.map(ingredient => `<li class="item">${ingredient}</li>`).join('');
 
+// const markup = ingredients
+//   .map(ingredient => {
+//     const itemEl = document.createElement('li');
+//     const item = itemEl.classList.add('item');
+//     `<li class="item">${ingredient}</li>`;
+//   })
+//   .join('');
+
 console.log(markup);
 listAllEl.innerHTML = markup;
