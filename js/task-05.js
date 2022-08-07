@@ -20,3 +20,14 @@ formInputName.addEventListener('input', event => {
   formOutputName.textContent = 'Anonymous';
   return;
 });
+
+// const updateValue = function (event) => {
+//   if (event.target.value === '') {
+//     formOutputName.textContent;
+//     return;
+//   }
+//   formOutputName.textContent = event.target.value;
+//   return;
+// };
+
+// formInputName.addEventListener('input', updateValue);

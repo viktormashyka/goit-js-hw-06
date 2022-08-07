@@ -11,18 +11,20 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
 const listAllEl = document.querySelector('ul#ingredients');
 console.log(listAllEl);
 
-const itemEl = document.createElement('li');
-const item = itemEl.classList.add('item');
+//**Варіант 1)**//
+// const itemEl = document.createElement('li');
+// const item = itemEl.classList.add('item');
 
-const markup = ingredients.map(ingredient => `<li class="item">${ingredient}</li>`).join('');
+// const markup = ingredients.map(ingredient => `<li class="item">${ingredient}</li>`).join('');
 
-// const markup = ingredients
-//   .map(ingredient => {
-//     const itemEl = document.createElement('li');
-//     const item = itemEl.classList.add('item');
-//     `<li class="item">${ingredient}</li>`;
-//   })
-//   .join('');
+//**Варіант 2)**//
+const createElements = element => {
+  const itemEl = document.createElement('li');
+  itemEl.textContent = element;
+  return itemEl;
+};
+
+const markup = ingredients.map(ingredient => createElements(ingredient));
 
 console.log(markup);
-listAllEl.innerHTML = markup;
+listAllEl.append(...markup);

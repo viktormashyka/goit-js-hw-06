@@ -27,10 +27,10 @@ const images = [
 const listAllEl = document.querySelector('ul.gallery');
 console.log(listAllEl);
 
-const itemEl = document.createElement('li');
-const item = itemEl.classList.add('item');
-const imageEl = document.createElement('img');
-const img = imageEl.classList.add('img');
+// const itemEl = document.createElement('li');
+// const item = itemEl.classList.add('item');
+// const imageEl = document.createElement('img');
+// const img = imageEl.classList.add('img');
 
 const markup = images
   .map(image => `<li class="item"><img class="img" src="${image.url}" alt="${image.alt}"/></li>`)

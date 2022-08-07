@@ -40,17 +40,21 @@ function setOutput() {
 
   inputEl.classList.add('valid');
 
-  if (inputValue.length === lengthEl) {
-    // inputEl.style.backgroundColor = 'green';
-    inputEl.classList.add('valid');
-    console.log(`Вітаю! Ви ввели необхідну кількість симовлів`);
+  if (Number(inputValue.length) !== Number(lengthEl)) {
+    // inputEl.style.backgroundColor = 'red';
+    console.log(`Кількість введених символів не дорівнює ${lengthEl}!
+    Введіть ${lengthEl} симолів`);
+    inputEl.classList.add('invalid');
+    inputEl.classList.remove('valid');
 
     return;
+  } else {
+    // inputEl.style.backgroundColor = 'green';
+    inputEl.classList.remove('invalid');
+    inputEl.classList.add('valid');
+    console.log(`Вітаю! Ви ввели необхідну кількість симовлів`);
+    return;
   }
-  // inputEl.style.backgroundColor = 'red';
-  console.log(`Кількість введених символів не дорівнює ${lengthEl}!
-    Введіть ${lengthEl} симолів`);
-  inputEl.classList.add('invalid');
 
   inputEl.value = '';
 }
